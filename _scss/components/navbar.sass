@@ -1,0 +1,291 @@
+#topnav
+    margin: 0 
+    padding-top: 20px
+    position: fixed
+    z-index: 999 
+    width: 100%
+    top: 0px
+    background: #fff
+    transition: all ease-out 0.3s
+    border-bottom: 2px solid $primary-color
+
+    &.no-shadow
+        box-shadow: unset !important
+
+    &.nav-down
+        box-shadow: 0px 0px 15px 0 rgba(0, 0, 0, 0.2)
+        background: #ffffff
+
+    &.nav-up
+        top: -130px 
+
+    .logo 
+        img  
+            max-height: 60px
+            padding: 10px 0
+
+    .nav-bg
+        width: 100% 
+        margin: 0 auto
+
+        .main-nav
+            margin: 0 auto
+            display: flex
+            justify-content: space-between
+            list-style-type: none
+
+    button 
+        box-shadow: unset
+
+    p  
+        font-size: 10px
+        margin: 0 auto
+
+    .call-us
+        text-align: left
+        margin: 0 auto
+        width: fit-content
+        a 
+            font-weight: 700
+
+    #language
+        text-align: right
+        margin: 0 auto
+        width: fit-content
+        button 
+            text-transform: none
+            font-size: 12px
+            svg 
+                width: 15px
+                margin: 0 5px -3px 0
+                transition: all ease-out 0.2s
+            &:hover 
+                svg 
+                    fill: $primary-color
+        .dropdown-menu
+            .dropdown-item
+                color: #000000
+                text-align: left   
+                margin-bottom: 5px
+                font-size: 13px
+                span 
+                    width: 30px
+                    display: block
+                    float: left
+                    font-weight: 500
+                svg 
+                    width: 20px
+                    height: 15px
+                    margin: 0 10px -3px 0
+                &:hover 
+                    color: $primary-color
+                    span 
+                        color: $primary-color
+                &:active 
+                    background: none
+
+@media (min-width: $w-large)
+    #topnav
+        .side-info
+            &.left 
+                #language 
+                    display: none
+
+        .menu-on-small
+            display: none
+        .main-nav
+            li 
+                display: inline
+                list-style-type: none
+                text-transform: uppercase
+                padding: 15px
+                font-size: $small
+                font-weight: $semi-bold
+                position: relative
+                
+                a 
+                    text-decoration: none
+                    color: $light-grey
+                    transition: all 0.2s
+
+                    &:hover
+                        color: $dark-grey
+                
+                &.active 
+                    a
+                        color: $primary-color
+
+@media (max-width: $w-large)
+    #topnav 
+        padding: 15px 0 
+
+        .logo 
+            position: relative
+            z-index: 999
+
+            img  
+                max-height: 50px
+
+        .side-info
+            &.left 
+                .call-us 
+                    display: none 
+            &.right 
+                #language 
+                    display: none
+        
+        .nav-bg 
+            transition: all 0.2s ease
+            background: transparent 
+            position: fixed
+            left: 0
+            top: 82px
+            width: 100%
+            height: 0
+
+            &.open 
+                background: rgba(0, 0, 0, 0.7)
+                height: 100%
+
+            &.closed 
+                background: rgba(0, 0, 0, 0.0)
+                height: 0%
+
+
+            .main-nav 
+                width: 100%
+                height: 0
+                position: fixed
+                top: -100%
+                text-align: center 
+                transition: opacity 0.3s linear
+                display: block
+
+                a  
+                    color: #ffffff
+                    text-transform: uppercase
+                    line-height: 2.5
+
+                &.open
+                    opacity: 1
+                    height: 100%
+                    top: 0
+                    left: -20px
+                    visibility: visible
+                    padding-top: 200px
+
+                &.closed
+                    opacity: 0
+                    height: 0
+                    top: -100%
+                    left: 0
+                    transition: background 10s
+
+@media (max-width: $w-medium)
+    #topnav
+
+        .menu-on-small
+            display: block 
+            width: 30px
+            height: 30px
+            outline: none
+            border: none
+            float: right
+            position: relative
+            right: 15px
+            top: -5px
+            padding: 0
+            z-index: 999
+
+        .menu-responsive
+            background: $dark-grey
+            display: block
+            width: 25px
+            height: 2px
+            position: relative
+            top: 8px
+            transition: all 0.07s cubic-bezier(0.000, 0.000, 0.580, 1.000)
+
+            &:before
+                content: ""
+                position: absolute
+                top: -7.5px
+                height: 2.5px
+                width: 25px
+                background: $dark-grey
+                position: relative
+                display: block
+                float: right
+                transition: all 0.2s ease-in
+
+            &:after
+                content: ""
+                position: absolute
+                bottom: -5px
+                height: 2.5px
+                width: 25px
+                background: $dark-grey
+                position: relative
+                display: block
+                float: right
+                transition: all 0.2s ease-in
+
+            &.open
+                height: 0px
+
+                &:before
+                    transform: rotate(-225deg)
+                    width: 25px
+                    top: 0px
+                    right: 0px
+
+                &:after
+                    width: 25px
+                    top: -2px
+                    right: -1px
+                    height: 2.5px
+                    transform: rotate(225deg)
+
+        #language 
+            margin: -10px 0 0 15px
+            display: block
+            z-index: 999
+            position: fixed
+            transition: all 0.2s ease-in
+            button
+                padding: 0
+            .dropdown-toggle::after
+                display: none
+            .dropdown-menu
+                visibility: hidden
+                display: block !important
+                top: 82px !important
+                border-radius: unset
+                position: fixed !important
+                background: transparent
+                margin: 0 auto
+                z-index: 1000
+                width: 100%
+                height: 0
+                transform: none !important
+                padding: 120px
+                transition: all 0.1s ease-in
+                
+                &.show 
+                    visibility: visible
+                    background: rgba(0,0,0,0.7)
+                    height: 100%
+
+                .dropdown-item
+                    text-align: center
+                    color: #ffffff
+                    width: min-content
+                    position: relative
+                    left: -20px
+                    margin: 0px auto 50px
+                    font-size: 17px
+                    svg 
+                        width: 25px
+                        height: 20px
+                        margin: 0 10px -3px
+

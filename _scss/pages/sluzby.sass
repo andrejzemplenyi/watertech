@@ -1,0 +1,113 @@
+#sluzby
+    #line-container
+        &.white-panel
+            padding: 0
+        max-height: 350px
+        margin: 300px auto 200px
+        &.first 
+            margin-top: 100px
+        
+        .image-holder
+            margin: -50px auto
+            width: 450px
+            height: 450px
+            overflow: hidden
+
+            img 
+                max-width: 100%
+
+        .text-part 
+            align-items: center
+            .content-center 
+                padding-left: 75px        
+                p  
+                    max-width: 400px
+
+    #icons-list 
+        margin: -100px auto 0
+
+@media (max-width: $w-medium)
+    #sluzby
+        #line-container
+            height: 370px
+            margin: 200px auto 150px
+            &.first 
+                margin-top: 65px
+            
+            .image-holder
+                margin: -10px auto
+                width: 370px
+                height: 370px
+                overflow: hidden
+
+                img 
+                    max-width: 100%
+
+            .text-part 
+                align-items: center
+                
+                .content-center   
+                    padding-right: 50px
+                    padding-left: 0
+                    &.right
+                        padding-left: 75px
+                        padding-right: 0
+                    p  
+                        max-width: 450px
+                        margin: 0 auto 20px
+
+@media (max-width: $w-small)
+    #sluzby
+        #line-container
+            margin-top: 375px !important
+            &.first 
+                margin-top: 50px !important
+            
+            .image-order 
+                order: -1
+
+            .image-holder
+                margin: -10px auto
+                width: 370px
+                height: 370px
+                overflow: hidden
+
+                img 
+                    max-width: 100%
+
+            .text-part 
+                order: 1
+                align-items: center
+                margin-top: 70px
+                text-align: center
+
+
+                .content-center 
+                    text-align: center
+                    padding: 0 !important
+
+                    p 
+                        margin: 0 auto 35px
+
+        #icons-list 
+            margin: 350px auto 100px
+
+@media (max-width: 450px)
+    #sluzby
+        #line-container
+            max-height: 230px    
+            margin-top: 480px !important
+            &.first 
+                margin-top: 50px !important
+            
+            .image-holder
+                margin: -15px auto
+                width: 260px
+                height: 260px
+
+@media (max-width: 300px)
+    #sluzby
+        #line-container
+            .image-holder
+                width: 200px
+    

@@ -1,0 +1,13 @@
+#1 NodeJS
+#2 Git CMD
+#3 npm install -g gulp
+#4 - http://jekyll-windows.juthilo.com -
+#5 To run Jekyll (template builder) install Ruby
+#6 Install Ruby DevKit (Extract to C:\RubyDevKit\)
+#7 cd C:\RubyDevKit\ -> ruby dk.rb init -> ruby dk.rb install
+#8 gem install jekyll
+#9 gem install rouge
+#10 change _config.yml - highlighter: rouge
+#11 gem install redcarpet
+#12 npm install 
+#13 gulp

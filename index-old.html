@@ -1,0 +1,169 @@
+--- 
+
+layout: default 
+title: WATER TECHNOLOGY
+
+---
+
+<section id="header" class="cover-photo ">
+    <div class="container text-center">
+        <div class="row">
+            <h1>Ponorné čerapdlá VODOLEY aj do tých najťažších podmienok</h1>
+        </div>
+        <div class="row">
+            <h2>Spoľahlite sa na kvalitu a profesionálny servis. Vyberte si z našej ponuky čerpacej techniky.</h2>
+        </div>
+        <div class="row">
+            <button class="line">Viac informácií</button>
+        </div>
+    </div>
+</section>
+
+<section id="icons-list" class="white-panel">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center text-uppercase">
+                <h4>Prvotriedna kvalita a odbornosť</h4>
+                <h1>
+                    Ponúkame široké spektrum <br>
+                    produktov a služieb
+                </h1>
+            </div>
+        </div>
+        <div class="row text-center icons-col-6">
+            <div class="col-12 col-md-4 clearfix">
+                {% include /svg/icons/buy.svg %}
+                <h3>Špičkové výrobky z celého sveta</h3>
+                <p>Dezinfekčné prostriedky PolyHMG začínajú účinkovať okmažite po aplikácií, pričom úplna dezinfekcia nastáva v priebehu 1-3hodín.</p>
+            </div>
+            <div class="col-12 col-md-4 clearfix">
+                {% include /svg/icons/contract.svg %}
+                <h3>Riešime problémy nie symptómy</h3>
+                <p>Dezinfekčné prostriedky PolyHMG začínajú účinkovať okmažite po aplikácií, pričom úplna dezinfekcia nastáva v priebehu 1-3hodín.</p>
+            </div>
+            <div class="col-12 col-md-4 clearfix">
+                {% include /svg/icons/roller.svg %}
+                <h3>Servis do 48 hodín</h3>
+                <p>Dezinfekčné prostriedky PolyHMG začínajú účinkovať okmažite po aplikácií, pričom úplna dezinfekcia nastáva v priebehu 1-3hodín.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="intro" class="text">
+    <div class="container">
+        <div class="row align-items-top text-block">
+            <div class="col-12 col-md-6 text-heading">
+                <h3 class="text-md-right right">
+                    Špičkové technológie aj do najťažších podmienok
+                </h3>
+            </div>
+            <div class="col-12 col-md-6">
+                <p class="text-center text-md-left">
+                    Ponúkame prvotriedne produkty overených značiek. Široké portfólio čerpacej techniky, príslušenstva, promptný odborný servis do 24 hodín a profesionálne služby pre zákazníkov, inštalatérov aj odborných predajcov.
+                </p>
+                <p class="text-center text-md-left">
+                    Ponúkame prvotriedne produkty overených značiek. Široké portfólio čerpacej techniky, príslušenstva, promptný odborný servis do 24 hodín a profesionálne služby pre zákazníkov, inštalatérov aj odborných predajcov.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="small-blog-list" class="container text-center">
+    <div class="row">
+        <div class="col-12">
+            <h4>Rady, tipy a užitočné informácie</h4>
+            <h1>Články</h1>
+            <p class="full-width">
+                Ako si vybrať čerpadlo, či ktorú riadiacu jednotlu potrebujete? 
+                Viac info o naších produktoch a užitočné rady pri ich používaní nájdete nižšie v článkoch.
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-around">
+        {% for novinka in site.categories.novinky %}
+            <div class="col-md-4 small-container">
+                <div class="white-panel hover-border">
+                    <div class="image-holder">
+                        <img src="{{ novinka.cover }}" alt="{{ novinka.cover-alt }}">
+                    </div>
+                    <h3 class="upper">
+                        {{ novinka.title }}
+                    </h3>     
+                    <p>
+                        {{ novinka.description }}                        
+                    </p>
+                    <a href="/ponorne-cerpadla.html"><button class="button mt-4">Viac info</button></a>         
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="our-work" class="container text-center">
+    <div class="row">
+        <div class="col-12">
+            <h4>Rady, tipy a užitočné informácie</h4>
+            <h1>Our Work</h1>
+        </div>
+    </div>
+    <div class="row justify-content-around">
+        <div class="col-md-4">
+            <div class="work-container">
+                <img src="img/referencie/zse/cover.jpg" alt="">   
+                <div class="work-cover">
+                    <h3>Dezinfekcia vodovodnej pipojky DN300</h3>
+                    <a href="#">
+                        <button class="button line">
+                            viac
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="work-container">
+                <img src="img/referencie/zse/cover.jpg" alt="">   
+                <div class="work-cover">
+                    <h3>Dezinfekcia vodovodnej pipojky DN300</h3>
+                    <a href="#">
+                        <button class="button line">
+                            viac
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="work-container">
+                <img src="img/referencie/zse/cover.jpg" alt="">   
+                <div class="work-cover">
+                    <h3>Dezinfekcia vodovodnej pipojky DN300</h3>
+                    <a href="#">
+                        <button class="button line">
+                            viac
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="info" class="text">
+        <div class="container">
+            <div class="row align-items-center text-block">
+                <div class="col-12 col-md-6">
+                    <p class="text-center text-md-right">
+                        Ponúkame prvotriedne produkty overených značiek. Široké portfólio čerpacej techniky, príslušenstva, promptný odborný servis do 24 hodín a profesionálne služby pre zákazníkov, inštalatérov aj odborných predajcov.
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 text-heading">
+                    <h3 class="text-md-left left">
+                        Špičkové technológie aj do najťažších podmienok
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </section>

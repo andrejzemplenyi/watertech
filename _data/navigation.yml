@@ -1,0 +1,28 @@
+navlist:
+
+- title: Domov
+  url: /
+
+- title: Kto sme?
+  url: /o-nas.html
+
+- title: Produkty
+  url: /produkty.html
+
+- title: E-shop
+  url: http://obchod.octopusenergi.sk
+
+- title: Služby
+  url: /sluzby.html
+
+- title: Referencie
+  url: /referencie.html
+
+- title: Na stiahnutie
+  url: /na-stiahnutie.html
+
+- title: Články
+  url: /clanky.html
+
+- title: Kontakt
+  url: /kontakt.html  

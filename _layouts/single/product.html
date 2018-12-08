@@ -1,0 +1,167 @@
+--- 
+
+layout: default 
+
+---
+<div id="product-template">
+
+    <section class="product-header">
+        <div class="product-header-cover clearfix">
+            <img src="{{ site.url }}/{{ page.wide_cover }}" alt="{{ page.wide_cover_alt }}">
+        </div>
+        <div class="container product-heading">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1> 
+                        {{ page.category_title }}  
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix text-center">
+            <a href=" 
+                {% if page.product_category contains "vodoley" %}
+                    {{ site.url }}/ponorne-cerpadla-vodoley.html
+                {% endif %}
+                {% if page.product_category contains "watertech" %}
+                    {{ site.url }}/riadiace-jednotky-watertech.html
+                {% endif %}
+                {% if page.product_category contains "h2o" %}
+                    {{ site.url }}/dezinfekcne-cistiace-prostriedky-h2ocool.html
+                {% endif %}
+                {% if page.product_category contains "polyhmg" %}
+                    {{ site.url }}/profesionalna-dezinfekcia-polyhmg.html
+                {% endif %}
+            "> 
+                &lt;-  Späť na zoznam produktov   
+            </a>
+        </div> 
+    </section> 
+
+    <section class="product-single">
+        <div class="container">
+            <div class="row align-items-center"> 
+                <div class="col-12 col-lg-6 text-block"> 
+                    <div class="main-image">
+                        <a href="{{ site.url }}/{{ page.image }}"
+                        class="fresco"
+                        data-fresco-caption="{{ page.image_title }}"
+                        data-fresco-options="ui: 'outside'"       
+                        data-fresco-group="{{ page.product_category }}">
+                            <img src="{{ site.url }}/{{ page.image }}" alt="{{ page.image_title }}" class="max-width-400">
+                        </a>
+                    </div>
+
+                    <div class="small-image d-flex justify-content-around">
+
+                        {% for image in page.small_image %}
+                            <div class="col-4 float-left">  
+                                <a href="{{ site.url }}/{{ image.path }}"
+                                class="fresco"
+                                data-fresco-caption="{{ image.alt }}"
+                                data-fresco-options="ui: 'outside'"       
+                                data-fresco-group="{{ page.product_category }}">
+                                    <img src="{{ site.url }}/{{ image.path }}" alt="{{ image.alt }}" class="max-width-400">
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 text-center text-lg-left">
+                    <h4>{{ page.work }}</h4>
+                    <h1>
+                        {% if page.title_br != null %}
+                            {{ page.title_br }}
+                        {% else %}
+                            {{ page.title }}
+                        {% endif %}
+                    </h1>
+
+                    <ul>
+                        <li> <span>Produktové číslo:</span> {{ page.product_code }}</li>
+                        {% for value in page.list %}
+                            <li class="list-margin-{{ page.list_margin }}"> <span>{{ value.list_name }}:</span> {{ value.list_value }}</li>
+                        {% endfor %}
+                    </ul>
+                    <p class="full-width mt-4">
+                        {{ page.description }}
+                    </p> 
+                </div>
+            </div>
+        </div>
+    </section>  
+
+    <section id="icons-list" class="white-panel">
+        <div class="container">
+            <div class="row text-center icons-col-6">
+                <div class="col-12 clearfix table-responsive">
+                    <table class="table table-striped text-center">
+                        <thead>
+                            <tr>
+                                {% for header in page.table_header %}
+                                    <th scope="col">{{ header.heading }}</th>
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for value in page.table %} 
+                                <tr>
+                                    <th scope="row">{{ value.first_column }}</th>
+                                    {% if value.columns %}
+                                        {% for column in value.columns %}  
+                                            <td>{{ column.value }}</td> 
+                                        {% endfor %}  
+                                    {% endif %}
+                                </tr>
+                            {% endfor %} 
+                        </tbody>
+                    </table> 
+                    
+                    <a href="
+                        {% if page.eshop_link != null %}
+                            {{ page.eshop_link }}   
+                        {% else %}
+                            https://obchod.octopusenergi.sk{{ page.url }}
+                        {% endif %}">
+                            <button class="button show-all">Prejsť do eshopu</button>
+                        </a>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bottom-link">
+        <div class="container">
+            <div class="row align-items-center text-block">
+                <div class="col-12 text-center text-uppercase">
+                    <h2 class="bold">
+                        Potrebujete presné technické parametre?
+                    </h2>
+                    <p>
+                        Grafy a tabuľky výtlakov nájdete v technických listoch a manuáloch. Ostatné dokumenty nájdete v sekcií "Na stiahnutie".
+                    </p>
+                    <div id="na-stiahnutie">
+                        <section class="container text-center">
+                            {% for document in page.download %}
+                                <div class="row justify-content-around download-list">
+                                    <div class="col-md-10 small-container">
+                                        <div class="white-panel hover-border">
+                                            <a href="{{ site.url }}/{{ document.link }}">
+                                                <h3 class="upper">
+                                                    {% include svg/icons/document.svg %} 
+                                                    {{ document.what }} {{ page.title }}
+                                                </h3>
+                                            </a>
+                                        </div>
+                                    </div>   
+                                </div> 
+                            {% endfor %}
+                        </section>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>  
+</div> 

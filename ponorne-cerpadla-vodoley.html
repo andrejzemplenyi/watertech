@@ -1,0 +1,205 @@
+--- 
+
+
+layout: default
+title: Ponorné čerpadlá VODOLEY - WATER TECHNOLOGY
+
+page_id: ponorne-cerpadla-vodoley
+cover_photo: img/images/vodoley.jpg  
+cover_photo_alt: Mikroorganizmy pod mikroskopom
+
+page_h1: Ponorné čerpadlá <br> VODOLEY
+
+content_smallheadline: Patentovaná kvalita z talianska
+content_headline: Ponorné čerpadlá <br> VODOLEY
+
+content_image: img/images/VODOLEY.png
+content_image_alt: Ukážka riadiach jednotiek VODOLEY
+content_description: Kvalitu čerpadiel Vodoley zaručuje východeurópska výroba – všetky komponenty sú vyrábané na jednom mieste – u jedného výrobcu – na Ukrajine. Technológie využité pri výrobe čerpadiel Vodoley zaručujú, že si poradia až s 200 gramami pevných čiastíc na meter kubický.
+
+page_features:
+    - icon: svg/icons/organims.svg
+      headline: ČERPADLÁ AJ DO VYSOKEJ ZÁŤAŽE
+      text: Konštrukcia a použitie kvalitných materiálov pri výrobe umožňujú vyššiu záťaž čerpadiel a to s použitím vo vodách s maximálnym objemom pevných častíc až 200g/m3.
+    - icon: svg/icons/water-cycle.svg
+      headline: KAŽDÉ ČERPADLO JE TESTOVANÉ
+      text: Pred zabaleníma a expedovaním je každé jedno čerpadlo otestované vo vode pri plnej zátaži. Čerpadlo musí spĺňať presné technické a výkonové parametre pri čerpaní v plnej záťaži. 
+
+# main_product: 101001
+
+products_per_line: 2
+
+article_h4: Prečo a ako používať naše produkty?
+article_h1: Ponorné čerpadlá <br> VODOLEY
+article_category: vodoley
+
+
+---
+
+
+<div id="{{ page.page_id }}">
+
+        <section class="product-header">
+                <div class="product-header-cover clearfix">
+                    <img src="{{ page.cover_photo }}" alt="{{ page.cover_photo_alt }}">
+                </div>
+                <div class="container product-heading">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h1> 
+                                {{ page.page_h1 }}
+                            </h1>
+                        </div>
+                    </div>
+                </div> 
+    
+            <div class="clearfix text-center">
+                <a href="/produkty.html"> 
+                    &lt;-  Späť na zoznam produktov
+                </a>
+            </div> 
+        </section>
+    
+        <section class="text">
+            <div class="container">
+                <div class="row align-items-center text-block">
+                    <div class="col-12 text-center text-uppercase">
+                        <h4>{{ page.content_smallheadline }}</h4>
+                        <h1>{{ page.content_headline }}</h1>
+                    </div>
+                    <div class="col-12 text-block">
+                        <img src="{{ site.url }}/{{ page.content_image }}" class="max-width-500 img-fluid" alt="{{ page.content_image_alt }}">
+                        <p class="text-center full-width mt-4">
+                            {{ page.content_description }} 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>  
+    
+        {% if page.page_features %}
+            <section id="icons-list">
+                <div class="container">
+                    <div class="row text-center icons-col-6 justify-content-around">
+                        {% for feature in page.page_features %}
+                            <div class="col-12 col-md-5 clearfix">
+                                {% include {{ feature.icon }} %}
+                                <h3>{{ feature.headline }}</h3>
+                                <p>{{ feature.text }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+    
+        {% if page.main_product %}
+            <section id="intro" class="text">
+                <div class="container">
+                    {% assign product = site.vodoley | where:"product_code", page.main_product %}
+                        {% for value in product %}
+                            <div class="row align-items-center text-block">
+                                <div class="col-12 text-center text-uppercase">
+                                    <h1>
+                                        {% if value.title_br != null %}
+                                            {{ value.title_br }}
+                                        {% else %}
+                                            {{ value.title }}
+                                        {% endif %}
+                                    </h1>
+                                </div>
+                                <div class="col-12 text-block"> 
+                                    <img src="{{ site.url }}/{{ value.image }}" class="max-width-500 img-fluid" alt="">
+                                    <p class="text-center full-width mt-4">
+                                        {{ value.description }}
+                                    </p>
+                                </div>
+                            </div> 
+    
+                            {% if value.features %}
+                                <div id="icons-list" class="row text-center icons-inverter-first justify-content-around">
+                                    {% for feature in value.features %}
+                                        <div class="col-12 col-md-4 clearfix">
+                                            {% include {{ feature.icon }} %}
+                                            <h3>{{ feature.headline }}</h3>
+                                            <p>{{ feature.text }}</p>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                            <div class="row align-items-center text-center">
+                                <a href="{{ site.url }}/{{ value.url }}" class="margin-center mt-4">
+                                    <button class="button">Viac info</button>
+                                </a>
+                            </div>
+                        {% endfor %}
+                </div>
+            </section>
+        {% endif %}
+    
+        <section id="product-grid" class="white-panel">
+            <div class="container">
+                <div class="row text-center justify-content-around">
+                {% assign products = site.vodoley | where:"product_show", "list" %}
+                    {% for product in products %}
+                        {% if page.products_per_line == 2 %}
+                            <div class="col-12 col-md-5 clearfix">
+                        {% endif %}
+                            <div class="product-item"> 
+                                <a href="{{ product.url }}">
+                                    <img src="{{ product.image }}" alt=""> 
+                                    {% if product.title_h4 != null %}
+                                        <h4>
+                                            {{ product.title_h4 }}
+                                        </h4>
+                                    {% endif %}
+                                    <h3>
+                                        {% if product.title_br != null %}
+                                            {{ product.title_br }}
+                                        {% else %}
+                                            {{ product.title }}
+                                        {% endif %}
+                                    </h3>
+                                </a>
+                                <p>{{ product.short_description }}</p>
+                                <a href="{{ product.url }}">
+                                    <button class="button">Viac info</button> 
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    
+        <section id="small-blog-list" class="text-center margin-100-100"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h4>{{ page.article_h4 }}</h4>
+                        <h1>{{ page.article_h1 }}</h1>
+                    </div>
+                </div>
+                <div class="row justify-content-around">
+                    {% for article in site.categories['bobule'] limit:3 %}
+                        <div class="col-md-4 small-container">
+                            <div class="white-panel hover-border">
+                                <div class="image-holder">
+                                    <img src="{{ article.cover }}" alt="{{ article.cover-alt }}">
+                                </div> 
+                                <h3 class="upper">
+                                    {{ article.title }}
+                                </h3>     
+                                <p>
+                                    {{ article.description }}                        
+                                </p>
+                                <a href="{{ article.url }}"><button class="button mt-4">Viac info</button></a>         
+                            </div>
+                        </div>
+                    {% else %}
+                        <p> Momentálne nemáme pre túto kategóriu produktov žiadne články.</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>

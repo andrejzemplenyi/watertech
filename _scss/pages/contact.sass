@@ -1,0 +1,92 @@
+#contact-page
+    margin: 130px auto 0
+
+    h4 
+        margin: 20px auto 0
+
+#contact-form
+    padding: 150px 0 80px
+
+    .not-sent 
+        color: $alert-color
+        margin: 50px 0 0px
+        text-transform: uppercase
+        font-size: 13px
+        transition: all 0.2s linear
+
+    .sent 
+        color: $success-color
+        margin: 50px 0 0px
+        text-transform: uppercase
+        font-size: 13px
+        transition: all 0.2s linear
+    
+    label 
+        transition: all 0.2s linear
+    input, textarea
+        transition: all 0.2s linear
+
+    .invalid-input
+        label
+            color: $alert-color  !important
+        
+        input, textarea
+            border-bottom: 1px solid red !important
+
+    .error-message
+        font-size: 10px
+        color: red
+        text-transform: uppercase
+
+#contact-line 
+    margin: 80px auto 30px
+
+    h1 
+        margin-bottom: 30px
+
+    .invoice-address 
+        line-height: 2
+        font-size: 14px
+        margin-bottom: 40px
+
+    p   
+        margin: 0 auto 50px
+        max-width: 650px
+
+    svg 
+        max-width: 150px
+
+        path 
+            fill: rgba($black, 0.4) 
+            transition: all 0.1s linear
+
+        &:hover 
+            path 
+                fill: rgba($black, 0.8)
+
+#cards-contact
+    margin: 40px auto 100px
+
+    .white-panel
+        padding: 40px 0 50px
+
+    .small-container 
+        padding: 0 30px
+
+        address
+            a:hover 
+                color: $primary-color
+
+
+
+@media (max-width: $w-small) 
+    #cards-contact
+        .small-container 
+            padding: 0 30px
+            margin: 30px auto          
+
+    #contact-form
+        padding: 100px 50px
+
+        form 
+            margin-bottom: 0

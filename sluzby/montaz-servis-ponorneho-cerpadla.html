@@ -1,0 +1,221 @@
+--- 
+
+
+layout: default
+title: Montáž a servis ponorných čerpadiel - WATER TECHNOLOGY
+
+page_id: montaz-cerpadla
+cover_photo: img/services/montaz.jpg 
+cover_photo_alt: Mikroorganizmy pod mikroskopom
+
+page_h1: MONTÁŽ A SERVIS <br> PONORNÝCH ČERPADIEL
+page_h3: INŠTALÁCIA ČERPADLA, RIADIACEJ JEDNOTKY A FILTRÁCIE S NAPOJENÍM NA SYSTÉM ČI AUTOMATICKÚ ZÁVLAHU
+
+content_smallheadline: namontjeme presne to čo potrebujete
+content_headline: Montáž čerpacej techniky na kľúč
+
+content_image: 
+content_image_alt: 
+content_description: <b> Pomôžeme Vám s výberom toho správneho čerpadla a zapojenia, tak aby všetko vyhovovalo vaším potrebám. Všetky komponenty do systému dodáme a sprevádzkujeme sysém tak, aby ste po našom odchode mohli vodu zo studne ihneď používať na zavlažovanie či vnútri v dome. </b> Pri výbere správnej techniky sa vždy riadime vašími požiadavkami a následnou predstavou využitia, ktorá je smerodajná pri výbere čerpadla aby poskytlo vždy dostatočný výkon práve pre zapojenia vo vašej studni. 
+
+page_features: 
+    - icon: svg/icons/trowel.svg
+      headline: Okamžitá funkčnosť 
+      text: Pripravíme a zapojíme všetko tak, aby ste mohli vodu zo studne okamžite používať na záhrade či vnútri v dome. 
+    - icon: svg/icons/crane_hook.svg
+      headline: Záručný aj pozáručný servis
+      text: Zabezpečujeme záručný aj pozáručný servis. V prípade problému poskytneme náhradný kus, ktorý môžete používať, kým závadu neodstránime.
+    - icon: svg/icons/wheelbarrow.svg
+      headline: Predĺžená záruka až 4 roky
+      text: Pri dodávke a zapojení kompletnej čerpacej techniky ponúkame až štvorročnú záruku na celý systém. 
+
+page_services: 
+    - icon: svg/icons/barrier.svg
+      headline: Servis čerpacej techniky 
+    - icon: svg/icons/crane_hook.svg 
+      headline: Čerpacie stanice
+    - icon: svg/icons/buy.svg
+      headline: Úpravovne pitnej vody
+    - icon: svg/icons/fan.svg
+      headline: Filtrácia vody
+    - icon: svg/icons/trowel.svg
+      headline: Výmena tlakových nádob 
+    - icon: svg/icons/ruler.svg
+      headline: Dezinfekcia a čistenie studní
+    - icon: svg/icons/document.svg
+      headline: Zazimovanie systémov
+    - icon: svg/icons/truck.svg
+      headline: Dezinfekcia nádrží
+
+main_product: 201001
+
+products_per_line: 2
+
+article_h4: Servis, údržba či zazimovanie?
+article_h1: Rady a tipy pri používaní čerpacej techniky
+article_category: montaz
+
+
+---
+
+
+<div id="{{ page.page_id }}">
+
+        <section class="product-header">
+                <div class="product-header-cover clearfix">
+                    <img src="{{ site.url }}/{{ page.cover_photo }}" alt="{{ page.cover_photo_alt }}">
+                </div>
+                <div class="container product-heading">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h1> 
+                                {{ page.page_h1 }}
+                            </h1>
+                            <h3> 
+                                {{ page.page_h3 }}
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+    
+            <div class="clearfix text-center">
+                <a href="/sluzby.html"> 
+                    &lt;-  Späť na zoznam služieb
+                </a>
+            </div> 
+        </section>
+    
+        <section class="text">
+            <div class="container">
+                <div class="row align-items-center text-block">
+                    <div class="col-12 text-center text-uppercase">
+                        <h4>{{ page.content_smallheadline }}</h4>
+                        <h1>{{ page.content_headline }}</h1>
+                    </div>
+                    <div class="col-12 text-block">
+                        <p class="text-center full-width">
+                            {{ page.content_description }} 
+                        </p>
+                    </div>
+                </div>
+    
+                {% if page.page_features %}
+                    <section id="icons-list">
+                        <div class="container">
+                            <div class="row text-center icons-col-6 justify-content-around">
+                                {% for feature in page.page_features %}
+                                    <div class="col-12 col-md-3 clearfix">
+                                        {% include {{ feature.icon }} %}
+                                        <h3>{{ feature.headline }}</h3>
+                                        <p>{{ feature.text }}</p>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </section>
+                {% endif %}
+            </div>
+        </section>  
+
+        <div id="small-blog-list" class="text-center white-panel">
+            <div class="container">
+                <div class="row justify-content-around">
+                    <div class="col-md-6 col-lg-5 small-container">
+                        <div class="white-panel hover-border">
+                            <div class="image-holder">
+                                <img src="{{ site.url }}/img/services/sezonne-vyuzitie.jpg" alt="">
+                            </div>
+                            <h4>Zapojenie čerpadla pre</h4>
+                            <h3 class="upper"> 
+                                Zavlažovanie so sezónnym využitím
+                            </h3>     
+                            <p>
+                                Čerpadlo sa automaticky zapne vždy pri otvorení záhradného kohútika. Je to zapojenie vhodné hlavne pre zavlažovanie počas letnej sezóny na polievanie hadicou alebo pomocou automatickej závlahy. 
+                            </p>
+                            <a href="/sluzby/montaz-cerpadla-sezonne-vyuzitie.html"><button class="button mt-4">Viac info</button></a>         
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-5 small-container">
+                        <div class="white-panel hover-border">
+                            <div class="image-holder">
+                                <img src="{{ site.url }}/img/services/celorocne-vyuzitie.jpg" alt=""> 
+                            </div>
+                            <h4>Zapojenie čerpadla pre</h4>
+                            <h3 class="upper">
+                                Zapojenie do domu s celoročným využitím
+                            </h3>     
+                            <p>
+                                Využívame jednotky pre automatickú reguláciu tlaku pre maximálny komfort a udržanie stáleho tlaku bez kolísania. Pri tomto zapojení nie je potrebný žiaden pravidelný servis ani tlakové nádoby.
+                            </p>
+                            <a href="/sluzby/montaz-cerpadla-celorocne-vyuzitie.html"><button class="button mt-4">Viac info</button></a>         
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <section class="text" id="additional-service">
+            <div class="container">
+                <div class="row align-items-center text-block">
+                    <div class="col-12 text-center text-uppercase">
+                        <h4>Postaráme sa o techniku</h4>
+                        <h1>Ďalšie služby s čerpacou technikou</h1>
+                    </div>
+                    <div class="col-12 text-block">
+                        <p class="text-center full-width">
+                            Často sa stáva, že nám klienti volajú s požiadavkou o výmenu čerpadla z dôvodu závadnosti systému, občasnej nefunkčnosti či komplikovaného servisu. 
+                        </p>
+                        <p class="text-center full-width">
+                            Vrámci naších prác ponúkame aj tieto služby:
+                        </p>
+                    </div>
+                </div>
+    
+                {% if page.page_services %}
+                    <section id="icons-list">
+                        <div class="container">
+                            <div class="row text-center icons-col-6 justify-content-around">
+                                {% for service in page.page_services %}
+                                    <div class="col-12 col-md-3 clearfix">
+                                        {% include {{ service.icon }} %}
+                                        <h3>{{ service.headline }}</h3>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </section>
+                {% endif %}
+            </div>
+        </section>  
+
+        <section id="small-blog-list" class="text-center margin-100-100 white-panel"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h4>{{ page.article_h4 }}</h4>
+                        <h1>{{ page.article_h1 }}</h1>
+                    </div>
+                </div>
+                <div class="row justify-content-around">
+                    {% for article in site.categories['bobule'] limit:3 %}
+                        <div class="col-md-4 small-container">
+                            <div class="white-panel hover-border">
+                                <div class="image-holder">
+                                    <img src="{{ article.cover }}" alt="{{ article.cover-alt }}">
+                                </div> 
+                                <h3 class="upper">
+                                    {{ article.title }}
+                                </h3>     
+                                <p>
+                                    {{ article.description }}                        
+                                </p>
+                                <a href="{{ article.url }}"><button class="button mt-4">Viac info</button></a>         
+                            </div>
+                        </div>
+                    {% else %}
+                        <p> Momentálne nemáme pre túto kategóriu produktov žiadne články.</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>

@@ -1,0 +1,63 @@
+button
+    background: none
+    border: none
+    outline: none
+    cursor: pointer
+    padding: 15px 40px
+    text-transform: uppercase
+    font-size: $x-small
+    border-radius: 50px !important
+    letter-spacing: 0.6px
+    font-weight: $semi-bold
+    color: $dark-grey
+    box-shadow: 0 5px 28px rgba(0, 0, 0, 0.12)
+    transition: all ease-in 0.2s
+    font-smoothing: antialiased
+
+    &:hover
+        color: $primary-color
+
+    &:focus 
+        outline: none
+
+    &.line 
+        background: none
+        border: 2px solid
+        box-shadow: none
+        &:hover 
+            border-color: $primary-color
+
+    &.line-small 
+        background: none
+        border: 1.5px solid $dark-grey
+        &:hover
+            border-color: $primary-color
+
+    &.address-link 
+        padding: 15px 50px !important
+        font-size: 13px
+        color: $primary-color
+        &:hover
+            box-shadow: 0 5px 28px rgba(0, 0, 0, 0.25)
+
+    &.c2a
+        padding: 15px 50px !important
+        font-size: 13px
+        background: $primary-color
+        color: #ffffff
+        &.blog 
+            margin: 50px 0 0
+        &:hover
+            box-shadow: 0 5px 28px rgba(0, 0, 0, 0.25)
+
+    &.show-all 
+        margin: 70px auto 0
+
+    &.white
+        border: 2px solid #ffffff
+        background: #ffffff
+        color: $primary-color
+        &:hover
+            border: 2px solid #ffffff
+            background: none
+            color: #ffffff

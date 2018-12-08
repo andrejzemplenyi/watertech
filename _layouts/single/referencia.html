@@ -1,0 +1,127 @@
+--- 
+
+layout: default 
+
+---
+<div id="referencia-template">
+
+    <section class="product-header">
+            <div class="product-header-cover clearfix">
+                <img src="{{ site.url }}/{{ page.cover_wide_path }}" alt="{{ site.url }}/{{ page.cover_wide_title }}">
+            </div>
+            <div class="container product-heading">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h1>
+                            {{ page.title }}
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+        <div class="clearfix text-center">
+            <a href="/referencie.html">
+                <-  Späť na zoznam referencií
+            </a>
+        </div> 
+    </section>
+
+    <section class="product-single">
+        <div class="container">
+            <div class="row align-items-center ">
+                <div class="col-12 col-lg-6 text-block">
+                    <div class="main-image">
+                        <a href="{{ site.url }}/{{ page.main_image }}"
+                        class="fresco"
+                        data-fresco-caption="{{ page.main_image_title }}"
+                        data-fresco-options="ui: 'outside'"       
+                        data-fresco-group="{{ page.gallery_code }}">
+                            <img src="{{ site.url }}/{{ page.main_image }}" alt="{{ page.main_image_title }}" class="max-width-400">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 text-center text-lg-left">
+                    <h4>{{ page.work }}</h4>
+                    <h1>
+                        {{ page.title }}
+                    </h1>
+
+                    <ul>
+                        {% for value in page.list %}
+                            <li> <span>{{ value.list_name }}:</span> {{ value.list_value }}</li>
+                        {% endfor %}
+                    </ul>
+                    <p class="full-width mt-4">
+                        {{ page.description }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>  
+
+    <section id="referencia-small-gallery" class="white-panel">
+            <div class="container">
+                    <div class="row text-left justify-content-around"> 
+                        {% for image in page.images %}
+                            <div class="col-12 col-md-6 col-lg-4 image">  
+                                <a href="{{ site.url }}/{{ image.image_path }}"
+                                class="fresco"
+                                data-fresco-caption="{{ image.title }}"
+                                data-fresco-options="ui: 'inside'"       
+                                data-fresco-group-options="thumbnails: 'horizontal'" 
+                                data-fresco-group="{{ page.gallery_code }}">
+                                    <img src="{{ site.url }}/{{ image.image_path }}" alt="{{ image.title }}" class="max-width-400">
+                                </a>
+                            </div>
+                        {% endfor %}
+                        {% for video in page.videos %}
+                            <div class="col-12 col-md-6 col-lg-4 image">  
+                                <a href="{{ video.video_path }}"
+                                class="fresco"
+                                data-fresco-group-options="thumbnails: 'horizontal'"
+                                data-fresco-type="youtube"
+                                data-fresco-options="
+                                width: 853,
+                                height: 480,
+                                youtube: { autoplay: 0 }"
+                                data-fresco-group="{{ page.gallery_code }}">
+                                    <img src="{{ site.url }}/{{ video.image_path }}" alt="{{ video.title }}" class="max-width-400">
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+    </section> 
+
+    <section class="bottom-link">
+        <div class="container">
+            <div class="row align-items-center text-block">
+                <div class="col-12 text-center text-uppercase">
+                    <h2 class="bold">
+                        Máte záujem o podobnú službu či produkty?
+                    </h2>
+                    <p>
+                        Radi Vám poradíme s realizáciou a návrhom správnych komponentov či riešením problému. <br> Kontaktujte nás pre individuálnu cenovú ponuku či viac informácií.
+                    </p>
+                </div>
+            </div>
+            <div class="row text-center justify-content-around" id="icons-list">
+                <div class="col-12 col-md-5 clearfix white-panel">
+                    <a href="{{ site.url }}/kontakt.html"> 
+                        {% include /svg/icons/buy.svg %}
+                        <h3>Kontaktujte nás</h3>
+                        <p>Radi zodpovieme všetky otázky či vypracujeme cenovú ponuku!</p>
+                    </a>
+                </div>
+                <div class="col-12 col-md-5 clearfix white-panel">
+                    <a href="{{ site.url }}/sluzby.html"> 
+                        {% include /svg/icons/buy.svg %}
+                        <h3>Pozrite si ponuku služieb</h3>
+                        <p>Montáž čerpadiel či dezinfekcia systému? Nie je problém!</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>  
+</div>

@@ -1,0 +1,146 @@
+--- 
+
+layout: default 
+title: Na stiahnutie - WATER TECHNOLOGY
+
+---
+
+<div id="na-stiahnutie">
+    <section id="contact-page" class="full-width text-center pt-5">
+        <div class="container">
+            <div class="row">
+                <h4>Online knižnica pre naše produkty</h4>
+                <h1>Všetky podklady dostupné online</h1>
+                <p class="full-width">
+                    Stratili ste manuál k čerpadlu, či neviete v akom pomere dávkovať dezinfekciu? 
+                    Nezúfajte, všetky dokumenty stiahnete u nás na webe.
+                </p>
+                <!-- img src="https://demo.yootheme.com/themes/wordpress/2016/horizon/wp-content/uploads/services_map.png" alt=""> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="small-blog-list" class="container text-center">
+        <div class="row justify-content-around">
+            <div class="col-md-5 small-container">
+                <div class="white-panel hover-border">
+                    <h3 class="upper">Certifikáty</h3>
+                    <p class="svg">
+                    <img src="img/icons/certificate.svg" alt="">
+                    </p>      
+                    
+                    <a href="/na-stiahnutie/certifikaty.html"><button class="button mt-4">pozrieť certifikáty</button></a>         
+                </div>
+            </div>
+            <div class="col-md-5 small-container">
+                <div class="white-panel hover-border">
+                    <h3 class="upper">Karty bezpečnostných údajov</h3>
+                    <p class="svg">
+                        <img src="img/icons/kbu.svg" alt="">
+                    </p>
+                    
+                    <a href="/na-stiahnutie/karty-bezpecnostnych-udajov.html"><button class="button mt-4">pozrieť KBÚ</button></a>
+                </div>
+            </div>           
+        </div>
+    </section>
+
+    <section id="small-blog-list" class="container text-center">
+        <div class="row justify-content-around">
+            <div class="col-md-5 small-container">
+                <div class="white-panel hover-border">
+                    <h3 class="upper">Technické listy a manuály</h3>
+                    <p class="svg">
+                        <img src="img/icons/technical-data.svg" alt="">
+                    </p>      
+                    
+                    <a href="/na-stiahnutie/technicke-listy.html"><button class="button mt-4">pozrieť technické listy a manuály</button></a>
+                </div>
+            </div>
+            <div class="col-md-5 small-container">
+                <div class="white-panel hover-border">
+                    <h3 class="upper">Marketingové podklady</h3>
+                    <p class="svg">
+                        <img src="img/icons/marketing.svg" alt="">
+                    </p>
+                    
+                    <a href="/na-stiahnutie/marketingove-podklady.html"><button class="button mt-4">pozrieť podklady</button></a>
+                </div>
+            </div>           
+        </div>
+    </section>
+
+    <section id="contact-form" class="white-panel"> 
+        <div class="container">
+            <div class="row text-center">
+                <h4>Máte otázky?</h4>
+                <h1>Chýbajú Vám ďalšie informácie?</h1>
+                <p class="full-width">
+                    Nenašli ste v certifikátoch a ostatných podkladoch čo ste potrebovali alebo Vám nie je niečo jasné? neváhajte a napíšte nám. 
+                </p>
+                <!-- img src="https://demo.yootheme.com/themes/wordpress/2016/horizon/wp-content/uploads/services_map.png" alt=""> -->
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col-12 col-md-9">
+
+                    <form method="post" id="form-contact" action="" name="form-contact" class="pipe">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                    <label for="firstName" class="col-form-label">Meno</label>
+                                    <input type="text" id="firstName">
+                                    <span class="error-message"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                    <label for="lastName" class="col-form-label">Priezvisko</label>
+                                    <input type="text" id="lastName" >
+                                    <span class="error-message"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                    <label for="phone" class="col-form-label">Telefónne číslo</label>
+                                    <input type="text" id="phone" >
+                                    <span class="error-message"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                    <label for="email" class="col-form-label">Email</label>
+                                    <input type="text" id="email" >
+                                    <span class="error-message"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="col-form-label">Vaša správa</label>
+                            <textarea name="text" id="message" cols="30" rows="4"></textarea>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="sent"></div>
+                        <div class="not-sent"></div>
+                        <button type="submit" form="form-contact" class="button mt-4">Odoslať email</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-line" class="full-width text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md-3">
+                        {% include svg/poly-pipe.svg %}
+                    </div>
+                    <div class="col-6 col-md-3">
+                        {% include svg/poly-well.svg %}
+                    </div>
+                    <div class="col-6 col-md-3">
+                        {% include svg/poly-air.svg %}
+                    </div>
+                    <div class="col-6 col-md-3">
+                        {% include svg/poly-heat.svg %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

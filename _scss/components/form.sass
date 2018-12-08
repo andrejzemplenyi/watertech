@@ -1,0 +1,50 @@
+form  
+    margin: 50px auto 
+    text-align: center
+
+    &.pipe
+        input, textarea
+            &:focus
+                border-color: $pipe
+
+    label
+        color: $black  
+        text-align: left
+        font-size: $x-small
+        font-weight: $regular
+        text-transform: uppercase
+        margin: 0 auto
+        width: 100%
+        padding-left: 10px
+
+    .form-group 
+        margin-bottom: 30px
+
+    input, textarea
+        width: 100%
+        padding: 10px 20px
+        outline: none
+        background: none
+        border-top: 0
+        border-left: 0
+        border-right: 0
+        border-bottom: 0.5px solid rgba($black, 0.4)
+        font-size: 14px
+        font-weight: 400
+        color: #dark-grey
+
+        &:focus
+            border-color: $primary-color
+
+            form 
+                label 
+                    font-weight: $semi-bold 
+                    
+    .error-message 
+        color: red 
+        font-size: 11px
+
+@media (max-width: $w-small) 
+    form  
+        label
+            text-align: center

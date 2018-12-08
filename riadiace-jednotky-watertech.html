@@ -1,0 +1,206 @@
+--- 
+
+
+layout: default
+title: Riadiace jednotky WATERTECH - WATER TECHNOLOGY
+
+page_id: riadiace-jednotky-watertech
+cover_photo: img/images/watertech.jpg 
+cover_photo_alt: Mikroorganizmy pod mikroskopom
+
+page_h1: Riadiace jednotky <br> WATERTECH
+
+content_smallheadline: Patentovaná kvalita z talianska
+content_headline: Riadiace jednotky <br> WATERTECH
+
+content_image: img/images/watertech.png
+content_image_alt: Ukážka riadiach jednotiek WATERTECH
+content_description: 
+
+page_features:
+    - icon: svg/icons/organims.svg
+      headline: URČENĚ AJ DO VLHKÝCH PRIESTOROV
+      text: Všetky zariadenia, či klasický Presscontrol alebo frekvenčný menič majú vysoké krytie a to až IP 65. Všetky jednotky sú preto vhodné aj do vlhkých priestorov ako vodomerná alebo studničná šachta
+    - icon: svg/icons/water-cycle.svg
+      headline: OCHRANA PROTI BEHU NA SUCHO
+      text: Jedným z najväčších problémov býva prehriatie čerpadla pri tzv. "behu na sucho". Jednotky majú v sebe zabudovanú prietokovú klapku, ktorá mechanicky spína resp. vypína čerpadlo ak nie je prietok vody v systéme.
+
+main_product: 201001
+
+products_per_line: 2
+
+article_h4: Prečo a ako používať naše produkty?
+article_h1: Riadiace jednotky <br> WATERTECH
+article_category: watertech
+
+
+---
+
+
+<div id="{{ page.page_id }}">
+
+        <section class="product-header">
+                <div class="product-header-cover clearfix">
+                    <img src="{{ page.cover_photo }}" alt="{{ page.cover_photo_alt }}">
+                </div>
+                <div class="container product-heading">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h1> 
+                                {{ page.page_h1 }}
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+    
+            <div class="clearfix text-center">
+                <a href="/produkty.html"> 
+                    &lt;-  Späť na zoznam produktov
+                </a>
+            </div> 
+        </section>
+    
+        <section class="text">
+            <div class="container">
+                <div class="row align-items-center text-block">
+                    <div class="col-12 text-center text-uppercase">
+                        <h4>{{ page.content_smallheadline }}</h4>
+                        <h1>{{ page.content_headline }}</h1>
+                    </div>
+                    <div class="col-12 text-block">
+                        <img src="{{ site.url }}/{{ page.content_image }}" class="max-width-500 img-fluid" alt="{{ page.content_image_alt }}">
+                        <p class="text-center full-width mt-4">
+                            {{ page.content_description }} 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>  
+    
+        {% if page.page_features %}
+            <section id="icons-list" class="white-panel">
+                <div class="container">
+                    <div class="row text-center icons-col-6 justify-content-around">
+                        {% for feature in page.page_features %}
+                            <div class="col-12 col-md-5 clearfix">
+                                {% include {{ feature.icon }} %}
+                                <h3>{{ feature.headline }}</h3>
+                                <p>{{ feature.text }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+    
+        {% if page.main_product %}
+            <section id="intro" class="text">
+                <div class="container">
+                    {% assign product = site.watertech | where:"product_code", page.main_product %}
+                        {% for value in product %}
+                            <div class="row align-items-center text-block">
+                                <div class="col-12 text-center text-uppercase">
+                                    <h4>{{ value.h4 }}</h4>
+                                    <h1>
+                                        {% if value.title_br != null %}
+                                            {{ value.title_br }}
+                                        {% else %}
+                                            {{ value.title }}
+                                        {% endif %}
+                                    </h1>
+                                </div>
+                                <div class="col-12 text-block"> 
+                                    <img src="{{ site.url }}/{{ value.image }}" class="max-width-500 img-fluid" alt="">
+                                    <p class="text-center full-width mt-4">
+                                        {{ value.description }}
+                                    </p>
+                                </div>
+                            </div> 
+    
+                            {% if value.features %}
+                                <div id="icons-list" class="row text-center icons-inverter-first justify-content-around">
+                                    {% for feature in value.features %}
+                                        <div class="col-12 col-md-4 clearfix">
+                                            {% include {{ feature.icon }} %}
+                                            <h3>{{ feature.headline }}</h3>
+                                            <p>{{ feature.text }}</p>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                            <div class="row align-items-center text-center">
+                                <a href="{{ site.url }}{{ value.url }}" class="margin-center mt-4">
+                                    <button class="button">Viac info</button>
+                                </a>
+                            </div>
+                        {% endfor %}
+                </div>
+            </section>
+        {% endif %}
+    
+        <section id="product-grid" class="white-panel">
+            <div class="container">
+                <div class="row text-center justify-content-around">
+                {% assign products = site.watertech | where:"product_show", "list" %}
+                    {% for product in products %}
+                        {% if page.products_per_line == 2 %}
+                            <div class="col-12 col-md-5 clearfix">
+                        {% endif %}
+                            <div class="product-item"> 
+                                <a href="{{ product.url }}">
+                                    <img src="{{ product.image }}" alt=""> 
+                                    {% if product.title_h4 != null %}
+                                        <h4>
+                                            {{ product.title_h4 }}
+                                        </h4>
+                                    {% endif %}
+                                    <h3>
+                                        {% if product.title_br != null %}
+                                            {{ product.title_br }}
+                                        {% else %}
+                                            {{ product.title }}
+                                        {% endif %}
+                                    </h3>
+                                </a>
+                                <p>{{ product.short_description }}</p>
+                                <a href="{{ product.url }}">
+                                    <button class="button">Viac info</button> 
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    
+        <section id="small-blog-list" class="text-center margin-100-100"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h4>{{ page.article_h4 }}</h4>
+                        <h1>{{ page.article_h1 }}</h1>
+                    </div>
+                </div>
+                <div class="row justify-content-around">
+                    {% for article in site.categories['bobule'] limit:3 %}
+                        <div class="col-md-4 small-container">
+                            <div class="white-panel hover-border">
+                                <div class="image-holder">
+                                    <img src="{{ article.cover }}" alt="{{ article.cover-alt }}">
+                                </div> 
+                                <h3 class="upper">
+                                    {{ article.title }}
+                                </h3>     
+                                <p>
+                                    {{ article.description }}                        
+                                </p>
+                                <a href="{{ article.url }}"><button class="button mt-4">Viac info</button></a>         
+                            </div>
+                        </div>
+                    {% else %}
+                        <p> Momentálne nemáme pre túto kategóriu produktov žiadne články.</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>

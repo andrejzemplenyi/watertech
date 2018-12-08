@@ -1,0 +1,182 @@
+html, body, *
+    font-family: 'Work Sans', sans-serif
+
+$x-small: 11px
+$small: 12px
+$paragraph: 15px
+$normal: 15px
+$big: 20px
+$heading: 40px
+
+$thin: 300
+$regular: 400
+$medium: 500
+$semi-bold: 600
+$bold: 700
+$xbold: 900
+
+h1, h2, h3, h1 a
+    font-family: Raleway
+
+h1 
+    font-weight: $bold
+    width: 100%
+    margin: 20px auto 75px  
+    max-width: 600px
+    font-size: 25px 
+ 
+    &.narrow
+        max-width: 500px
+
+    &.no-bottom
+        margin-bottom: 30px
+        p  
+            margin-bottom: 70px    
+
+h2 
+    font-size: $normal
+    font-weight: $thin
+    color: $dark-grey
+    line-height: 2
+    width: 100%
+
+    &.bold 
+        font-weight: 800
+        margin: 20px auto
+
+h3 
+    font-size: $normal
+    font-weight: $semi-bold
+    color: $black
+    line-height: 1.5
+    width: 100%
+    text-transform: uppercase
+
+h4 
+    color: $primary-color   
+    font-size: $x-small
+    text-transform: uppercase
+    margin: 0 auto
+    width: 100%
+
+p 
+    font-size: $paragraph
+    color: $dark-grey
+
+    &.full-width 
+        max-width: 750px 
+        margin: 0 auto 40px
+        line-height: 1.5
+
+    &.narrow
+        max-width: 500px 
+        margin: 0 auto 40px
+        line-height: 1.5
+
+address
+    font-size: $paragraph
+    color: $dark-grey
+    max-width: 750px 
+    line-height: 1.5
+    a 
+        text-decoration: none
+        color: $black
+        font-size: $paragraph
+        transition: all 0.1s linear
+
+        &:hover
+            text-decoration: none
+
+    &.heat
+        a
+            &:hover 
+                color: $heat
+    
+//HEADING WITH LINE
+
+.text-heading h3
+    max-width: 400px
+    margin: 0 auto
+    padding: 20px
+    position: relative
+    display: block
+
+    &:after 
+        content: ''
+        display: block
+        position: absolute
+        top: 5px
+        width: 50px 
+        height: 3px
+        background: #222222
+        margin-left: -25px
+
+    &.right
+        &:after 
+            right: 20px
+            margin-left: 0
+
+    &.left
+        &:after 
+            left: 20px
+            margin-left: 0
+
+    &.center
+        &:after 
+            right: 50%
+            left: 50%
+
+.text-block 
+    text-align: center
+
+    .max-width-500
+        max-width: 500px 
+
+    .max-width-400
+        max-width: 400px 
+
+    .max-height-img
+        max-height: 450px
+
+    p
+        margin: 0 auto 40px
+        padding: 0 20px 0px 20px
+        line-height: 1.8
+
+        &:last-child
+            margin-bottom: 0
+
+.text
+    margin: 110px auto 100px
+    display: flex
+
+    &.mb-half
+        margin: 110px auto 60px !important
+
+.no-margin-bottom
+    margin-bottom: 0pc !important 
+
+@media (max-width: $w-xsmall) 
+    h1 
+        font-size: 30px
+
+@media (max-width: $w-small)
+    .text-heading 
+        order: -1
+    .text-block 
+        order: 1
+
+    .text-heading h3
+        text-align: center  
+        margin: 0 auto  
+
+        &:after
+            left: 50% !important
+            right: 50% !important
+
+@media (max-width: $w-medium)
+    .text-block 
+        .max-width-500
+            max-width: 100% 
+        .max-width-400
+            max-width: 100% 

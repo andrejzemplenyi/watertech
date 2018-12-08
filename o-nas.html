@@ -1,0 +1,152 @@
+--- 
+
+layout: default 
+title: O nás - WATER TECHNOLOGY
+
+---
+<div id="about">
+    <section id="mini-header">
+        <div class="container-fluid bg-cover text-center">
+            <div class="row">
+                <h1>Sme autorizovaný predajca a dovozca pre široké spektrum technológií a produktov ako Vodoley, Watertech či PolyHMG.</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="text">
+        <div class="container">
+            <div class="row align-items-center text-block">
+                <div class="col-12 text-heading">
+                    <h3 class="text-center center">
+                        Špičkové technológie aj do najťažších podmienok
+                    </h3>
+                </div>
+                <div class="col-12 text-block">
+                    <p class="text-center full-width">
+                            Octopus Energi zabezpečuje kompletnú distribúciu a predaj ponorných čerpadiel, riadiacich jednotiek profesionálnych dezinfekčných prostriedkov a technického príslušenstva. 
+                            Ponúkame produkty pre koncových odberateľov a distribúciu pre montážne firmy, inštalatérov a odborné predajne. 
+                    </p>
+
+                    <p class="text-center full-width">
+                            V portfóliu našich služieb nájdete montáž, inštaláciu a servis čerpacej techniky, postaráme sa o dezinfekciu rozvodov pitnej vody a čistenie potrubí ako vykurovacích systémov tak aj rozvodov SV a TÚV.
+                            Všetko od čerpadiel, cez riadiace jednotky až po expanzné nádoby doladíme až po posledný ventil k vašej maximálnej spokojnosti. 
+                            
+                            <br><br>
+
+                            Spolupracujeme s profesionálnymi predajcami, naše produkty dodávame do sietí predajní po celom Slovensku. 
+                            Máte záujem o spoluprácu? Pozrite si portfólio našich produktov alebo nás kontaktujte.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>  
+
+    <section id="icons-list" class="companies white-panel">
+            <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center text-uppercase">
+                            <h4>Autorizovaný distrubútor</h4>
+                            <h1>Zastupujeme rôzne značky na území Slovenska</h1>
+                        </div>
+                    </div>
+                    <div class="row text-center"> 
+                        <div class="col-12 col-md-4 clearfix">
+                            {% include /svg/logo/vodoley-logo.svg %}
+                            <h3>Ponorné čerpadlá</h3>
+                            <p>Ponorné a povrchové čerpadlá značky VODOLEY vyrábané na ukrajine. Špecifické sú ich kvalitou a odolnosťou aj pri silnom zaťažení</p>
+                        </div>
+                        <div class="col-12 col-md-4 clearfix">
+                            {% include /svg/logo/watertech-logo.svg %}
+                            <h3>Riadiace jednotky</h3>
+                            <p>Najväčší výrobca Presscontrolov na svete. Výrobca je držiteľom niekoľkých patentov v oblasti regulácie čerpadiel.</p>
+                        </div>
+                        <div class="col-12 col-md-4 clearfix">
+                            {% include /svg/logo/polyhmg-logo.svg %}
+                            <h3>Dezinfekcia</h3>
+                            <p>Dezinfekčné prostriedky pre profesionálov na báze polymérov. Vynikajú najmä rýchlou účinnosťou a širkou škálou využitia.</p>
+                        </div>
+                    </div>
+                </div>
+            </section> 
+    </section> 
+
+
+
+    <section id="intro" class="text">
+            <div class="container">
+                <div class="row align-items-top text-block">
+                    <div class="col-12 col-md-6 text-heading">
+                        <h3 class="text-md-right right">
+                            Spoľahnúť sa môžete aj keď to nejde
+                        </h3>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <p class="text-center text-md-left">
+                            Na naše produkty a služby ponúkame servis do 48 hodín priamo na mieste. V prípade, že sa jedná o záručný servis, neplatíte ani cent a nemusíte týždne čakať na opravu či výmenu. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+    <section class="text white-panel">
+            <div class="container">
+                <div class="row align-items-center text-block">
+                    <div class="col-12 text-heading">
+                        <h3 class="text-center center">
+                            Pozrite sa, kde všade sme robili alebo využili naŠe technológie
+                        </h3>
+                    </div>
+                    <div class="col-12 text-block">
+                        <p class="text-center full-width">
+                            Pracovali sme a dodávali sme tovar na malé aj veľké projekty. Mnohé z nich nájdete aj u nás v sekcií "Referencie" s opisom čo sme potrebovali dosiahnúť
+                            a ako sme požadované riešenie dosiahli. Pre ďalšie a pravidelne aktualizované práce nás môžete sledovať aj na facebooku: <a href="https://www.facebook.com/octopusenergisk/">www.facebook.com/octopusenergisk </a>
+                        </p>
+                    </div>
+                </div>
+
+                <div id="our-work" class="container text-center">
+                    <div class="row justify-content-around">
+                        {% for referencia in site.categories['Referencie'] limit:3 %}
+                            <div class="col-md-4">
+                                <div class="work-container">
+                                    <img src="{{ referencia.cover_small_path }}" alt="{{ referencia.cover_small_title }}">
+                                    <div class="work-cover">
+                                        <h3>{{ referencia.title }}</h3>
+                                        <p id="post-meta">{{ tags_content }}</p>
+                                        <a href="{{ referencia.url }}">
+                                            <button class="button line">
+                                                viac
+                                            </button>
+                                        </a> 
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    
+                        <a href="/referencie.html"><button class="button show-all">Zobraziť všetky referencie</button></a>
+                        
+                </div>
+            </div>
+        </section>
+
+        <section id="info" class="text">
+            <div class="container">
+                <div class="row align-items-center text-block">
+                    <div class="col-12 col-md-6">
+                        <p class="text-center text-md-right no-margin-bottom">
+                            Na trhu pôsobíme od roku 2007, no v odvetví pracujeme už viac ako 25 rokov. Stojíme za stovkami projektov, za sebou máme tisícky spokojných klientov. Spolupracujeme s profesionálmi z oblasti čerpacej techniky. Ceníme si férový prístup a preto sa mnohé naše pracovné vzťahy prerástli do priateľstva.                    </p>
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6 text-heading">
+                        <h3 class="text-md-left left">
+                            Dlhoročné skúsenosti v obore a spolahlivosť ktorá trvá
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>

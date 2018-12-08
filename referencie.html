@@ -1,0 +1,117 @@
+--- 
+
+layout: default 
+title: Referencie - WATER TECHNOLOGY
+
+---
+
+<div id="referencie">
+    <section class="full-width text-center first-header">
+        <div class="container">
+            <div class="row align-items-center text-block">
+                <div class="col-12 text-center text-uppercase">
+                    <h4>Kde všade sme vyriešili problém?</h4>
+                    <h1 class="no-bottom">Referencie</h1>
+                    <p class="full-width margin-bottom-header">
+                        Na stránke ešte pracujeme. Jej obsah čoskoro doplníme.
+                    </p>
+                </div> 
+ 
+
+                <div id="our-work" class="container text-center">
+                    <div class="row justify-content-around">
+                        {% for referencia in site.categories['Referencie'] %}
+                            <div class="col-md-6">
+                                <div class="work-container">
+                                    <img src="{{ referencia.cover_small_path }}" alt="{{ referencia.cover_small_title }}">
+                                    <div class="work-cover">
+                                        <h3>{{ referencia.title }}</h3>
+                                        <h4>{{ referencia.work }} </h4>
+                                        <a href="{{ referencia.url }}">
+                                            <button class="button line">
+                                                viac
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-form" class="white-panel"> 
+        <div class="container">
+            <div class="row text-center">
+                <h4>Máte otázky?</h4>
+                <h1>Kontaktujte nás a radi vám poradíme</h1>
+                <p class="full-width">
+                    Radi vám zodpovieme všetky otázky ohľadom používania a účinnosti dezinfekčných prípravkov PolyHMG či 
+                    poradíme s technickou aplikáciou či priamo riešením problému.
+                </p>
+                <!-- img src="https://demo.yootheme.com/themes/wordpress/2016/horizon/wp-content/uploads/services_map.png" alt=""> -->
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col-12 col-md-9">
+
+                    <form method="post" id="form-contact" action="" name="form-contact" class="pipe">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                    <label for="firstName" class="col-form-label">Meno</label>
+                                    <input type="text" id="firstName">
+                                    <span class="error-message"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                    <label for="lastName" class="col-form-label">Priezvisko</label>
+                                    <input type="text" id="lastName" >
+                                    <span class="error-message"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                    <label for="phone" class="col-form-label">Telefónne číslo</label>
+                                    <input type="text" id="phone" >
+                                    <span class="error-message"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                    <label for="email" class="col-form-label">Email</label>
+                                    <input type="text" id="email" >
+                                    <span class="error-message"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="col-form-label">Vaša správa</label>
+                            <textarea name="text" id="message" cols="30" rows="4"></textarea>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="sent"></div>
+                        <div class="not-sent"></div>
+                        <button type="submit" form="form-contact" class="button mt-4">Odoslať email</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-line" class="full-width text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    {% include svg/poly-pipe.svg %}
+                </div>
+                <div class="col-6 col-md-3">
+                    {% include svg/poly-well.svg %}
+                </div>
+                <div class="col-6 col-md-3">
+                    {% include svg/poly-air.svg %}
+                </div>
+                <div class="col-6 col-md-3">
+                    {% include svg/poly-heat.svg %}
+                </div>
+            </div>
+        </div>
+    </section>

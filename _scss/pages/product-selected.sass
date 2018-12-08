@@ -1,0 +1,293 @@
+.product-header
+    margin: 120px auto 0
+    position: relative
+    overflow: hidden
+
+    .product-header-cover
+        width: 100%
+        height: 100%
+        position: absolute
+        z-index: -1
+
+        img 
+            position: absolute
+            left: -100%
+            right: -100%
+            margin: 0 auto
+            min-width: 100%
+
+        &:after
+            content: ''
+            width: 100%
+            height: 100%
+            position: absolute
+            z-index: 2
+            background: rgba( 0, 0, 0, 0.35)
+            left: 0
+            top: 0
+
+    .product-heading 
+        padding: 70px 0 0
+        color: $white
+
+    a 
+        background: #222222
+        font-size: 13px
+        width: 50%
+        margin: 0px auto 0
+        padding: 30px
+        float: left
+        display: block
+        color: $white    
+        text-transform: uppercase
+        
+        &:hover 
+            font-weight: 600
+
+.photo-block
+    height: 350px
+    margin: 0px auto 200px
+
+    .image-holder
+        width: 50%
+        height: 100%
+        overflow: hidden
+        position: relative
+
+        &.right
+            float: right
+        &.left
+            float: left
+
+        img  
+            max-width: 100%
+            margin: 0 auto
+
+    .text-part 
+        width: 50%
+        height: 100%
+        float: right
+        /*background: rgba(20, 20, 20, 1)*/
+        vertical-align: middle
+        padding: 0 150px 0 80px
+
+        /* h1, h2, p  
+            color: #ffffff*/
+            
+        h1 
+            margin: 0 0 30px 0
+            max-width: 250px
+            line-height: 1.5
+        p  
+            margin: 50px auto 0
+            line-height: 1.8
+
+#product-grid 
+    .col-12 
+        margin-bottom: 50px 
+
+    .product-item
+        padding: 30px 0
+        display: block
+        border: 1px solid transparent
+        transition: all 0.2s linear
+
+        img 
+            max-width: 250px
+            margin: 0 auto 30px
+        
+        p  
+            text-decoration: none
+            padding: 0 50px    
+            min-height: 70px
+
+        button 
+            display: block
+            margin: 30px auto 15px
+    
+        &:hover
+            border: 1px solid $lightblue-color
+            text-decoration: none
+    
+        a
+            &:hover
+                text-decoration: none
+                
+.product-single 
+    margin: 80px auto 100px
+
+    .small-image 
+        margin: 20px auto 0
+        .col-4
+            border: 1px solid transparent
+            padding: 10px 0
+            max-width: 130px
+
+            img 
+                max-width: 100px
+
+            &:hover 
+                border: 1px solid $lightblue-color
+
+    h4 
+        margin: 60px 0 0
+
+    h1 
+        margin-bottom: 40px
+
+    p.price 
+        font-weight: 700
+        font-size: 25px
+        color: $lightblue-color
+        margin: 40px auto 
+
+        span 
+            font-size: 15px
+            color: $black
+
+        .second-line
+            padding: -40px 0 0
+            display: block
+            font-size: 12px
+            font-weight: 500
+            line-height: 0.1
+
+    ul 
+        list-style-type: none 
+        margin: 0 auto
+        padding: 0
+        font-size: 13px
+
+        span
+            font-weight: 700
+
+#companies 
+    h3 
+        font-size: 18px
+        font-weight: 800
+
+    .right-text 
+        margin-top: 30px
+
+.product-photo 
+    margin-bottom: 50px
+
+#cards.blog-posts
+    margin: 100px auto 0
+
+.max-height-img
+    max-height: 450px
+    margin: 0px auto
+    right: -50px
+    position: relative
+
+.download-link
+    width: 100%
+    display: block
+    margin: 5px auto 
+
+    a 
+        color: $dark-grey
+        vertical-align: middle        
+        font-weight: 600
+
+        &:hover
+            color: $primary-color
+
+            svg, path 
+                fill: $primary-color
+        
+        svg, path
+            max-height: 15px
+            max-width: 15px
+            fill: $dark-grey
+            margin: 0 auto -2px
+
+.bottom-link
+    padding: 80px 0px 100px
+
+
+// Product selected - EVO
+
+#benefits 
+    padding: 100px 0 80px 
+    img
+        max-width: 60px
+        margin: 40px 0 20px
+    p 
+        max-width: 350px
+        margin: 0 auto
+
+#faq 
+    .col-md-6 
+        padding: 25px 50px
+
+@media (max-width: $w-medium) 
+    .product-header
+        margin: 60px auto 0
+        
+        &:hover 
+            font-weight: 600
+ 
+    #cards 
+        .small-container 
+            margin-bottom: 50px
+    
+    .product-photo 
+        margin-bottom: 50px
+
+        
+@media (max-width: $w-small) 
+    .product-header
+        a 
+            width: 100%
+    .product-single 
+        margin: 00px auto 100px
+
+        .small-image 
+            padding: 0 10px
+            .col-4
+                border: 1px solid transparent
+                padding: 10px 0
+                width: auto
+
+                img 
+                    max-width: 100%
+
+                &:hover 
+                    border: 1px solid $lightblue-color
+
+        h4 
+            margin: 60px 0 0
+
+        h1 
+            margin-bottom: 40px
+
+        p.price 
+            font-weight: 700
+            font-size: 25px
+            color: $lightblue-color
+            margin: 40px auto 
+
+            span 
+                font-size: 15px
+                color: $black
+
+            .second-line
+                padding: -40px 0 0
+                display: block
+                font-size: 12px
+                font-weight: 500
+                line-height: 0.1
+
+        ul 
+            list-style-type: none 
+            margin: 0 auto
+            padding: 0
+            font-size: 13px
+
+            span
+                font-weight: 700
+
+    #companies 
+        padding: 80px 50px

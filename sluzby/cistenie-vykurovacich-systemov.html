@@ -1,0 +1,253 @@
+--- 
+
+
+layout: default
+title: Čistenie podlahového kúrenia a radiátorov - WATER TECHNOLOGY
+
+page_id: montaz-cerpadla
+cover_photo: img/services/cistenie.jpg 
+cover_photo_alt: Mikroorganizmy pod mikroskopom
+
+page_h1: ČISTENIE PODLAHOVÉHO <br> KÚRENIA A RADIÁTOROV
+page_h3: ODSTRÁNENIE BÚCHANIA A KLEPANIA V RADIÁTOROCH A ZNÍŽENIE NÁKLADOV NA KÚRENIE
+
+content_smallheadline: Postaráme sa, aby ste znovu bývali v teple
+content_headline: NEFUNKČNÉ KÚRENIE ČI VYSOKÉ NÁKLADY?
+
+content_image: 
+content_image_alt: 
+content_description: <b>Vykurovací systém je vytvorený z množstva rôznych materiálov a následkom vysokých teplôt sa z potrubia uvoľňujú nečistoty. </b>Zahusťovanie vody v systéme môžu úplne znemožniť prietok, čo spôsobí studené miesta v podlahovke či opotrebovanie obehového čerpadla. Zvýšenou hustotou vody sa predlžujeme aj celkový čas na zohriatie vody na požadovanú teplotu čo má za následok zvýšené náklady na ohrev vody. <b>Systém vyčistíme od mechanických nečistôt, odvzdušníme, ochránime pred ďalším vznikom nežiadúcich problémov a zregulujeme tak aby sme optimalizovali celkový chod vykurovacieho systému.</b>
+
+
+page_features: 
+    - icon: svg/icons/trowel.svg
+      headline: Studené alebo nefunkčné miesta v kúrení
+      text: Kombinácia vodného kameňa, hrdze a pilín z rôznych materiálov, môžu zhoršiť, alebo úplne zamedziť prietok v potrubí čo spôsobí, že teplá voda sa do radiatoru, alebo miestnosti jednoducho nedostane.
+    - icon: svg/icons/crane_hook.svg
+      headline: Časté výmeny obehového čerpadla alebo vibrácie
+      text: Obehové čerpadlo distribuuje a mieša teplú vodu v systéme. V prípade, že neustále čerpá vodu plnú kovových pilín a nečistôt dôjde k opotrebeniu jeho lamiel, nepríjemným zvukom či vibráciám.
+    - icon: svg/icons/wheelbarrow.svg
+      headline: Zvýšené náklady za plyn aleboo elektriku na kúrenie
+      text: Zdá sa vám, že za kúrenie platíte každý rok viac a viac? Môže to byť spôsobené zvýšenou hustotou kvapaliny v kúrení a váš kotol musí pracovať dlhšie aby takúto vodu zohrial na požadovanú teplotu.
+
+page_services: 
+    - icon: svg/icons/barrier.svg
+      headline: Servis čerpacej techniky 
+    - icon: svg/icons/crane_hook.svg 
+      headline: Čerpacie stanice
+    - icon: svg/icons/buy.svg
+      headline: Úpravovne pitnej vody
+    - icon: svg/icons/fan.svg
+      headline: Filtrácia vody
+    - icon: svg/icons/trowel.svg
+      headline: Výmena tlakových nádob 
+    - icon: svg/icons/ruler.svg
+      headline: Dezinfekcia a čistenie studní
+    - icon: svg/icons/document.svg
+      headline: Zazimovanie systémov
+    - icon: svg/icons/truck.svg
+      headline: Dezinfekcia nádrží
+
+gallery_code: montaz-frekvencneho-menica-sered
+
+images:
+article_h4: Servis, údržba či zazimovanie?
+article_h1: Rady a tipy pri používaní čerpacej techniky
+article_category: montaz
+
+contact_h4: Objednajte si nezáväzné vypracovanie cenovej ponuky alebo obliadku priamo u vás doma
+contact_h1: Kontaktujte nás teraz <br> a začnite kúriť už dnes :)
+contact_p: 
+    - <b> ČISTENIE VYKUROVACÍCH SYSTÉMOV </b> <br> Karol Zemplényi <br> +421 903 821 474 <br> <a href="mailto:zemplenyi@octopusenergi.sk"> zemplenyi&#64;octopusenergi.sk </a> <br><br><br>
+    - Získajte jasnú predstavu o cene a riešení. Odpovieme na vaše otázky, odporučíme ideálne riešenie a pripravíme vám cenovú ponuku. Telefonický nás môžete kontaktovať v čase od 8:00-19:00. Na maily sa snažíme reagovať čo najskôr v najbližších 48 hodinách.
+
+
+
+---
+
+
+<div id="{{ page.page_id }}">
+
+        <section class="product-header">
+                <div class="product-header-cover clearfix">
+                    <img src="{{ site.url }}/{{ page.cover_photo }}" alt="{{ page.cover_photo_alt }}">
+                </div>
+                <div class="container product-heading">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h1> 
+                                {{ page.page_h1 }}
+                            </h1>
+                            <h3> 
+                                {{ page.page_h3 }}
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+    
+            <div class="clearfix text-center">
+                <a href="/sluzby.html"> 
+                    &lt;-  Späť na zoznam služieb
+                </a>
+            </div> 
+        </section>
+    
+        <section class="text">
+            <div class="container">
+                <div class="row align-items-center text-block">
+                    <div class="col-12 text-center text-uppercase">
+                        <h4>{{ page.content_smallheadline }}</h4>
+                        <h1>{{ page.content_headline }}</h1>
+                    </div>
+                    <div class="col-12 text-block">
+                        <p class="text-center full-width">
+                            {{ page.content_description }} 
+                        </p>
+                    </div>
+                </div>
+    
+                {% if page.page_features %}
+                    <section id="icons-list">
+                        <div class="container">
+                            <div class="row text-center icons-col-6 justify-content-around">
+                                {% for feature in page.page_features %}
+                                    <div class="col-12 col-md-3 clearfix">
+                                        {% include {{ feature.icon }} %}
+                                        <h3>{{ feature.headline }}</h3>
+                                        <p>{{ feature.text }}</p>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </section>
+                {% endif %}
+            </div>
+        </section>  
+
+        <div id="small-blog-list" class="text-center white-panel">
+            <div class="container">
+                <div class="row align-items-center text-block">
+                    <div class="col-12 text-center text-uppercase">
+                        <h4>Nepociťujem žiadne problémy uvedené vyššie</h4>
+                        <h1>Ako často je potrebné kúrenie čistiť?</h1>
+                    </div>
+                    <div class="col-12 text-block">
+                        <p class="text-center full-width">
+                            Nedá sa jednoznačne určiť ako často je potrebné kúrenie čistiť a zbaviť ho mechanických nečistôt. 
+                            <b>Systém sa zanáša používaním a závisí od použitých materiálov a použitej chémie pre inhibíciu a odstránenie vodného kameňa či hrdze zo systému.</b>
+                        </p>
+                        <p class="text-center full-width">
+                            Pokiaľ však nie je systém správne odvzdušnený a odregulovaný, v potrubí sa usádzajú nečistoty o to viac a klesá efektivita systému. Odporúčame systém čistiť v pravidelných intervaloch minimálne každý - až každý druhý rok. Pri zanedbaní prevencie sa systém čistí ťažšie a je potrebné vymeniť rôzne komponenty systému, ktoré sa už zachrániť nedajú. 
+                            Ak stále nepociťujete žiaden problém, je lepšie systém aspoň preventívne vyčistiť a zabrániť tak komplikovaným čisteniam a opravám systemu. 
+                        </p>
+                        <p class="text-center full-width">
+                            <b>Ak stále nepociťujete žiaden problém, je lepšie systém aspoň preventívne vyčistiť a zabrániť tak komplikovaným čisteniam a opravám systemu.</b>
+                        </p>
+                    
+                        <a href="#contact"><button class="button show-all">Objednať bezplatnú obhliadku</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <section class="text" id="additional-service">
+            <div class="container">
+                <div class="row align-items-center text-block">
+                    <div class="col-12 text-center text-uppercase">
+                        <h4>Systém sme napustili čistou vodou...</h4>
+                        <h1>...Aké nečistoty by sa v kúrení mohli objaviť?</h1>
+                    </div>
+                    <div class="col-12 text-block">
+                        <p class="text-center full-width">
+                            <b>Pokiaľ systém napustíte čistou vodou z vodovodu, alebo nepustíte do podlahového kúrenia vodu zo studne a neupravíte ju chemicky vytvoríte ideálne prostredie pre šírenie baktérií a tvorbu rias.</b>
+                        </p>
+                        <p class="text-center full-width">
+                            Riasy vodu zahusťujú a zvyšujú náklady na výhrevnosť vody. Tento jav je je obzvlášť vidieť v prípade, že je kúrenie zapojené z PPR potrubia (šedý plast) bez kyslíkovej bariéry. V potrubí sa tiež usádzajú piliny z mosadze, pozinku, nereze či plastu, ktoré sa obalujú hrdzou a vodným kameňom.
+                        </p>
+                        <div id="referencia-small-gallery" class="row text-left justify-content-around"> 
+                            {% for image in page.images %}
+                                <div class="col-12 col-md-6 col-lg-4 image">  
+                                    <a href="{{ site.url }}/{{ image.image_path }}"
+                                    class="fresco" 
+                                    data-fresco-caption="{{ image.title }}"
+                                    data-fresco-options="ui: 'inside'"       
+                                    data-fresco-group-options="thumbnails: 'horizontal'" 
+                                    data-fresco-group="{{ page.gallery_code }}">
+                                        <img src="{{ site.url }}/{{ image.image_path }}" alt="{{ image.title }}" class="max-width-400">
+                                    </a>
+                                </div>
+                            {% endfor %}
+                            {% for video in page.videos %}
+                                <div class="col-12 col-md-6 col-lg-4 image">  
+                                    <a href="{{ video.video_path }}"
+                                    class="fresco"
+                                    data-fresco-group-options="thumbnails: 'horizontal'"
+                                    data-fresco-type="youtube"
+                                    data-fresco-options="
+                                    width: 853,
+                                    height: 480,
+                                    youtube: { autoplay: 0 }"
+                                    data-fresco-group="{{ page.gallery_code }}">
+                                        <img src="{{ site.url }}/{{ video.image_path }}" alt="{{ video.title }}" class="max-width-400">
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>          
+
+        <section id="contact" class="contact text-center margin-100-100 white-panel"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h4>{{ page.contact_h4 }}</h4>
+                        <h1>{{ page.contact_h1 }}</h1>
+                    </div>
+                </div>
+                <div class="row justify-content-around">
+                    <p class="full-width text-center">
+                        {{ page.contact_p }}
+                    </p>
+                    <div class="col-12 col-md-9">
+    
+                        <form method="post" id="form-contact" action="" name="form-contact">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                        <label for="firstName" class="col-form-label">Meno</label>
+                                        <input type="text" id="firstName">
+                                        <span class="error-message"></span>
+                                </div>
+                                <div class="form-group col-md-6">
+                                        <label for="lastName" class="col-form-label">Priezvisko</label>
+                                        <input type="text" id="lastName" >
+                                        <span class="error-message"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                        <label for="phone" class="col-form-label">Telefónne číslo</label>
+                                        <input type="text" id="phone" >
+                                        <span class="error-message"></span>
+                                </div>
+                                <div class="form-group col-md-6">
+                                        <label for="email" class="col-form-label">Email</label>
+                                        <input type="text" id="email" >
+                                        <span class="error-message"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="col-form-label">Vaša správa</label>
+                                <textarea name="text" id="message" cols="30" rows="4"></textarea>
+                                <span class="error-message"></span>
+                            </div>
+                            <div class="sent"></div>
+                            <div class="not-sent"></div>
+                            <button type="submit" form="form-contact" class="button mt-4">Odoslať email</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>

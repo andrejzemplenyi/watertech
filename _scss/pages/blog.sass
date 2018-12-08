@@ -1,0 +1,250 @@
+#blog 
+    padding: 10px
+    p 
+        &.narrow 
+            max-width: 700px
+    .facebook 
+        width: 800px
+        margin: 0 auto
+        .fb-page 
+            margin: 0 auto
+
+    .article-list
+        margin: 30px auto 80px
+        max-height: 400px
+
+        .white-panel
+            margin: 0 auto 100px 
+            padding: 0
+            max-height: 400px
+            display: flex
+            align-items: center
+            overflow: hidden
+            .row 
+                max-height: 100%
+
+            .article-image 
+                margin: 0 auto
+                padding: 0
+                float: left
+                overflow: hidden
+                max-height: 100%
+                max-width: 500px
+
+                img  
+                    height: 100%
+
+            .article-desc
+                float: right
+                padding: 50px
+                align-self: center
+
+                h1
+                    margin: 0 auto
+
+                a 
+                    color: $black
+                    &:hover
+                        text-decoration: none
+                        color: $primary-color
+                        transition: all 0.1s ease-in-out
+
+                h2  
+                    font-weight: $bold
+                    font-size: 11px
+
+                p  
+                    margin: 30px auto
+
+    .article-text
+        margin-bottom: 50px
+        .width-photo
+            max-height: 400px
+            overflow: hidden
+            margin: 0 auto 50px
+
+            img  
+                width: 100%
+
+        h2  
+            font-weight: $bold  
+            font-size: 15px
+            color: $primary-color
+            margin-top: 40px
+            text-transform: uppercase
+
+        p  
+            line-height: 2
+            &.narrow 
+                max-width: 800px
+            &.bold
+                font-weight: $bold
+
+            b
+                color: $black
+                text-decoration: underline
+
+            a 
+                color: $primary-color
+                font-weight: 500
+
+        ul 
+            margin-bottom: 0
+            li b 
+                color: $black
+                text-decoration: none
+
+        q 
+            background-color: $primary-color 
+            padding: 40px
+            margin: 60px 0  
+            display: block
+            color: $white
+            font-weight: 500
+            &:before, &:after
+                content: ""
+
+        .quote
+            margin: 70px auto 50px
+            &.white-panel
+                padding: 50px
+
+            h4  
+                font-size: 17px 
+                font-weight: $bold
+                color: $black
+                line-height: 1.5
+
+        .images 
+            margin: 50px auto
+
+            .image-container 
+                overflow: hidden  
+                max-height: 200px
+                &.no-overflow
+                    overflow: visible !important
+                &.image-description
+                    p
+                        line-height: 1.8
+
+                img  
+                    width: 100%
+                    &.middle
+                        position: relative
+                        top: -45%
+
+        .download
+            .white-panel
+                margin-bottom: 30px
+                padding: 40px 10px 40px
+ 
+                h3.upper
+                    margin-top: 0
+
+                    svg, path 
+                        max-width: 20px !important
+                        max-height: 20px !important
+                        margin: 0 5px -4px 0 !important
+
+    #contact 
+        #form-contact 
+            .form-group
+                margin: 0 auto 
+
+                label 
+                    text-align: center
+
+    #article-bottom-bar
+        position: fixed
+        bottom: 0
+        width: 100%
+
+        .white-panel
+            padding: 20px 60px
+            font-size: 14px
+            .back
+                float: left
+                a  
+                    color: $black
+                    &:hover
+                        color: $primary-color
+
+            .share-icons
+                float: right
+
+    #facebook 
+        margin: 100px auto 100px
+
+
+    .post-body
+        .crisp-client .crisp-6k5puw .crisp-4n0wrv .crisp-113f7m5
+            margin-bottom: 60px !important
+
+    #product-grid 
+        .col-12 
+            margin-bottom: 50px 
+
+        .product-item
+            padding: 30px 0
+            display: block
+            border: 1px solid transparent
+            transition: all 0.2s linear
+
+            img 
+                max-width: 250px
+                margin: 0 auto 30px
+            
+            p  
+                text-decoration: none
+                padding: 0 50px    
+                min-height: 70px
+
+            button 
+                display: block
+                margin: 30px auto 15px
+        
+            &:hover
+                border: 1px solid $lightblue-color
+                text-decoration: none
+        
+            a
+                &:hover
+                    text-decoration: none
+
+@media (max-width: 1200px) 
+    #blog
+        .article-list
+            .white-panel
+                .article-image 
+                    img  
+
+                .article-desc
+                    padding: 0 30px 
+                    display: flex
+                    align-items: center
+
+                    .center-container
+
+
+@media (max-width: $w-small) 
+    #blog
+        .article-list
+            max-height: none
+            .white-panel
+                max-height: none 
+                margin: 0 auto
+
+                .row
+                    margin: 0 auto
+                .article-image 
+                    max-height: 200px
+                    img  
+                        width: 100%
+
+                .article-desc
+                    padding: 30px 40px 50px 
+                    display: flex
+                    align-items: center
+
+                    .center-container
+                    

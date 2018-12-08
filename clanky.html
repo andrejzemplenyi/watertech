@@ -1,0 +1,74 @@
+--- 
+
+layout: default 
+title: Články - WATER TECHNOLOGY
+pagination:
+    collection: posts
+    enabled: true
+    category: clanky
+    trail: 
+        before: 2 # The number of links before the current page 
+        after: 2  # The number of links after the current page 
+
+---  
+<div id="blog">  
+    <section class="full-width text-center first-header">
+        <div class="container">
+            <div class="row"> 
+                <h4>Rady, tipy a užitočné informácie</h4> 
+                <h1>Články</h1>
+                <p class="full-width">
+                    Ako si vybrať čerpadlo, či ktorú riadiacu jednotlu potrebujete? 
+                    Viac info o naších produktoch a užitočné rady pri ich používaní nájdete nižšie v článkoch.
+                </p>
+                <!-- img src="https://demo.yootheme.com/themes/wordpress/2016/horizon/wp-content/uploads/services_map.png" alt=""> -->
+            </div> 
+        </div>
+    </section>
+
+    {% for post in paginator.posts %}
+        <section class="container text-center article-list">
+            <div class="row">
+                <div class="col-sm-12 col-lg-10 white-panel">
+                    <div class="row">
+                        <div class="col-12 col-md-5 article-image"> 
+                            <a href="{{ post.url }}">
+                                <img src="{{ post.cover }}" alt="{{ post.cover-alt }}"> 
+                            </a>
+                        </div> 
+                        <div class="col-12 col-md-7 article-desc text-center text-md-left "> 
+                            <div class="center-container">
+                                <h2 class="article-type">
+                                    {{ post.category_title }}
+                                </h2>
+                                <h1 class="article-name">
+                                    <a href="{{ post.url }}">
+                                        {{ post.title }}
+                                    </a>
+                                </h1>
+
+                                <p class="article-p">
+                                    {{ post.description }}
+                                </p>
+                                
+                                <a href="{{ post.url }}">
+                                    <button class="line-small">
+                                        čítať
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endfor %}
+
+    {% if paginator.page_trail %}
+    {% for trail in paginator.page_trail %}
+        <li {% if page.url == trail.path %}class="selected"{% endif %}>
+            <a href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}">{{ trail.num }}</a>
+        </li>
+    {% endfor %}
+    {% endif %}
+</div>

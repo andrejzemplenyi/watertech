@@ -1,0 +1,103 @@
+--- 
+
+layout: default 
+title: WATER TECHNOLOGY
+
+---
+<div id="index">
+    <section id="header" class="cover-photo ">
+        <div class="container text-center">
+            <div class="row">
+                <h1>Profesionálna dezinfekcia rozvodov pitnej vody, studní a vzduchotechniky.</h1>
+            </div>
+            <div class="row">
+                <h2>
+                    Eliminuje všetky druhy baktérií, vírusov a húb (vrátane plesní), pričom po aplikácií zanecháva dlhotrvajúcu ochrannú vrstvu chrániacu pred ďalším výskytom mikroorganizmov.
+                </h2>
+            </div>
+            <div class="row">
+                <a href="{{ site.url }}/profesionalna-dezinfekcia-polyhmg.html"><button class="white">Viac informácií</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="icons-list">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center text-uppercase">
+                    <h4>Prvotriedna kvalita a odbornosť</h4>
+                    <h1>
+                        Čerpacia technika, regulácia <br>
+                        a profesionálna dezinfekcia
+                    </h1>
+                </div>
+            </div>
+            <div class="row text-center icons-col-6">
+                <div class="col-12 col-md-4 clearfix">
+                    {% include /svg/icons/buy.svg %}
+                    <h3>Špičkové výrobky z celého sveta</h3>
+                    <p>Sme výhradný dovozca a predajce rôznych značiek v oblasti čerpacej techniky, riadiacich jednotik či dezinfekcie pre profesionálne použitie.</p>
+                </div>
+                <div class="col-12 col-md-4 clearfix">
+                    {% include /svg/icons/contract.svg %}
+                    <h3>Riešime problémy nie symptómy</h3>
+                    <p>Nezameriavame sa len na vyriešenie problému, ktorý sa prejaví na povrchu, snažíme sa vždy odhaliť pôvod chyby a riešiť ju pri zdroji príčiny bez možnosti opakovania.</p>
+                </div>
+                <div class="col-12 col-md-4 clearfix">
+                    {% include /svg/icons/roller.svg %}
+                    <h3>Servis do 48 hodín</h3>
+                    <p>Naše produkty si kvalitu skutočne držia a vďaka tomu vieme poskytnúť záručný servis priamo u Vás na mieste. Zaručíme 100% chod systému čo najskôr ako to je možné.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="info" class="text white-panel">
+        <div class="container">
+            <div class="row align-items-center text-block">
+                <div class="col-12 col-md-6 text-heading">
+                    <h3 class="text-md-right right">
+                        Špičkové technológie aj do najťažších podmienok
+                    </h3>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="text-center text-md-left">
+                        Ponúkame prvotriedne produkty overených značiek. Široké portfólio čerpacej techniky, príslušenstva, promptný odborný servis do 48 hodín a profesionálne služby pre zákazníkov, inštalatérov aj odborných predajcov.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="small-blog-list" class="text-center margin-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h4>Nové produkty či akcia? Tu sa dozviete...</h4>
+                    <h1>Novinky</h1>
+                    <p class="full-width">
+                        Do našej ponuky sa snažíme zaradiť stále nové kvalitné produkty a realizovať rôzne prezentácie a školenia pre odborníkov v predajniach naších obchodných partnerov.
+                    </p>
+                </div>
+            </div>
+            <div class="row justify-content-around">
+                {% for novinka in site.categories['clanky'] limit:3 %}
+                    <div class="col-md-4 small-container">
+                        <div class="white-panel hover-border">
+                            <div class="image-holder">
+                                <img src="{{ novinka.cover }}" alt="{{ novinka.cover-alt }}">
+                            </div>
+                            <h3 class="upper">
+                                {{ novinka.title }}
+                            </h3>     
+                            <p>
+                                {{ novinka.description }}                        
+                            </p>
+                            <a href="{{ novinka.url }}"><button class="button mt-4">Viac info</button></a>         
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</div>

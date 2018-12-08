@@ -1,0 +1,52 @@
+        <div id="topnav" class="text-center">
+            <div class="row align-items-center">
+                <div class="col-2 col-lg-3 align-self-center side-info left">
+                    <div class="call-us">
+                        <p>Máte otázky?</p>
+                        <a href="tel:+421911111902">+421 911 111 902</a>
+                    </div>
+                    <div id="language">
+                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {% include /svg/lang/globe.svg %} SK
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#"><span>EN</span>{% include /svg/lang/en.svg %} English</a>
+                            <a class="dropdown-item" href="#"><span>SK</span>{% include /svg/lang/sk.svg %} Slovensky</a>
+                            <a class="dropdown-item" href="#"><span>DE</span>{% include /svg/lang/de.svg %} Deutsch</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 col-lg-6 logo">
+                    <a href="{{ site.url }}">
+                        <img src="{{ site.url }}/img/logo/water-technology-logo-black.png" alt="WATER TECHNOLOGY Logo">
+                    </a>
+                </div>
+                <div class="col-2 col-lg-3 align-self-center side-info right">
+                    <button class="menu-on-small"><span class="menu-responsive"></span></button>
+                    <div id="language">
+                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {% include /svg/lang/globe.svg %} Language
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="{{ site.url }}/en{{ page.id }}"><span>EN</span>{% include /svg/lang/en.svg %} English</a>
+                            <a class="dropdown-item" href="{{ site.url }}/sk{{ page.id }}"><span>SK</span>{% include /svg/lang/sk.svg %} Slovensky</a>
+                            <a class="dropdown-item" href="{{ site.url }}/de{{ page.id }}"><span>DE</span>{% include /svg/lang/de.svg %} Deutsch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="nav-bg">
+                    <ul class="main-nav">
+                        {% assign url = page.url|remove:'index.html' %}
+                        {% for item in site.data.navigation.navlist %}
+                            <li {% if page.url == item.url %}class="active"{% endif %}>
+                                <a href="{{ item.url }}" alt="{{ item.title }}">
+                                    {{ item.title }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>

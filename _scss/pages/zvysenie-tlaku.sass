@@ -1,0 +1,139 @@
+#montaz-cerpadla, #dezinfekcia-potrubia, #zvysenie-tlaku
+    h1 
+        text-transform: uppercase
+    .product-heading
+        h1 
+            margin-bottom: 20px
+
+        h3 
+            margin: 0 auto 70px
+            color: #FFF
+            max-width: 500px
+
+    .text 
+        h1 
+            margin-bottom: 50px
+        p 
+            max-width: 800px
+            margin-top: 0px
+
+        #icons-list
+            .icons-col-6
+                margin-top: 80px
+                .photo-box
+                    height: 150px
+                    width: 90%
+
+                .col-12 
+                    margin-bottom: 30px
+
+                p 
+                    margin-top: 20px
+
+    #small-blog-list.white-panel
+        margin: 80px auto 15px
+
+        .white-panel 
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 35px 0px
+
+            h3 
+                min-height: 50px
+                max-width: 200px
+                margin: 15px auto 0
+        h3 
+            margin-top: 5px
+        p 
+            margin-top: 0px
+
+    #small-blog-list
+        &.contact 
+            h1 
+                margin-bottom: 40px
+            p 
+                max-width: 700px
+                a 
+                    color: $primary-color
+
+    #additional-service 
+        .icons-col-6 
+            margin-top: 55px
+
+            .col-12 
+                margin: 20px auto 
+
+                h3 
+                    max-width: 200px
+                    margin: 0 auto
+    
+    .ako-to-prebieha
+        text-align: center
+
+        #icons-list 
+            margin-bottom: 60px
+
+        a
+            margin: 0px auto 0
+
+    
+    #referencia-small-gallery
+        margin: 50px auto 0
+        .image 
+            padding: 10px 10px
+            a
+                display: block
+                position: relative
+                max-height: 300px
+                overflow: hidden
+                &:before
+                    content: ""
+                    background: url("../img/icons/search.png") 
+                    background-size: cover
+                    fill: $white
+                    position: absolute
+                    top: 0
+                    bottom: 0
+                    right: 0
+                    left: 0
+                    margin: auto
+                    width: 30px
+                    height: 30px
+                    opacity: 0
+                    z-index: 99
+                    transition: all 0.2s
+                &:after
+                    content: ""
+                    position: absolute
+                    top: 0
+                    left: 0
+                    background: rgba(0, 0, 0, 0.4)
+                    width: 100%
+                    height: 100%
+                    opacity: 0
+                    transition: all 0.2s
+
+                &:hover 
+                    &:after
+                        opacity: 1
+                    &:before
+                        opacity: 1
+
+                img 
+                    max-width: 100%
+                    width: 100%
+
+    #faq 
+        p, h3
+            padding: 0 20px 0
+            text-align: left
+
+    a 
+        color: $primary-color
+
+
+#zvysenie-tlaku
+    #work-images
+        margin-top: 50px
+        .image
+            a img 
+                max-width: 100%
+     
